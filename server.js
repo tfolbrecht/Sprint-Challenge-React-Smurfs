@@ -52,10 +52,10 @@ server.post('/smurfs', (req, res) => {
     height
   } = req.body;
   const newSmurf = {
+    id: smurfId,
     name,
     age,
-    height,
-    id: smurfId
+    height
   };
   if (!name || !age || !height) {
     return sendUserError(

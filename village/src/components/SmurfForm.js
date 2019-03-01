@@ -5,7 +5,6 @@ class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // id: 'test',
       name: '',
       age: '',
       height: ''

@@ -43,7 +43,7 @@ let smurfs = [{
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
 });
-let smurfId = 1;
+let smurfId = smurfs.length + 1;
 
 server.post('/smurfs', (req, res) => {
   const {

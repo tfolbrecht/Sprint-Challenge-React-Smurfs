@@ -9,16 +9,35 @@ server.use(cors());
 
 const sendUserError = (msg, res) => {
   res.status(422);
-  res.json({ Error: msg });
+  res.json({
+    Error: msg
+  });
   return;
 };
 
-let smurfs = [
+let smurfs = [{
+    "id": 0,
+    "name": "Papa Smurf",
+    "age": 100,
+    "height": "8cm",
+  },
   {
-    id: 0,
-    name: 'Brainey Smurf',
-    age: 200,
-    height: '8cm'
+    "id": 1,
+    "name": "Brainey Smurf",
+    "age": 28,
+    "height": "8cm",
+  },
+  {
+    "id": 2,
+    "name": "Hefty Smurf",
+    "age": 23,
+    "height": "8cm",
+  },
+  {
+    "id": 3,
+    "name": "Smurfette",
+    "age": 22,
+    "height": "8cm",
   }
 ];
 server.get('/smurfs', (req, res) => {
@@ -27,8 +46,17 @@ server.get('/smurfs', (req, res) => {
 let smurfId = 1;
 
 server.post('/smurfs', (req, res) => {
-  const { name, age, height } = req.body;
-  const newSmurf = { name, age, height, id: smurfId };
+  const {
+    name,
+    age,
+    height
+  } = req.body;
+  const newSmurf = {
+    name,
+    age,
+    height,
+    id: smurfId
+  };
   if (!name || !age || !height) {
     return sendUserError(
       'Ya gone did smurfed! Name/Age/Height are all required to create a smurf in the smurf DB.',
@@ -51,8 +79,14 @@ server.post('/smurfs', (req, res) => {
 });
 
 server.put('/smurfs/:id', (req, res) => {
-  const { id } = req.params;
-  const { name, age, height } = req.body;
+  const {
+    id
+  } = req.params;
+  const {
+    name,
+    age,
+    height
+  } = req.body;
   const findSmurfById = smurf => {
     return smurf.id == id;
   };
@@ -68,11 +102,15 @@ server.put('/smurfs/:id', (req, res) => {
 });
 
 server.delete('/smurfs/:id', (req, res) => {
-  const { id } = req.params;
+  const {
+    id
+  } = req.params;
   const foundSmurf = smurfs.find(smurf => smurf.id == id);
 
   if (foundSmurf) {
-    const SmurfRemoved = { ...foundSmurf };
+    const SmurfRemoved = {
+      ...foundSmurf
+    };
     smurfs = smurfs.filter(smurf => smurf.id != id);
     res.status(200).json(smurfs);
   } else {

@@ -7,20 +7,20 @@ With server Server Side Routing. A route is sort of like the file path to an htm
 
 ### 2.  What does HTTP stand for?
 
-Hyper Text Transfer Protocol
+HTTP Stands for **H**yper **T**ext **T**ransfer **P**rotocol
 
 ### 3.  What does CRUD stand for?
 
-Create, Read, Update, Delete
+CRUD stands for **C**reate, **R**ead, **U**pdate, **D**elete
 
 ### 4.  Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
-|CRUD      | HTTP Methods |
-|----------|:------------:|
-|Create    | Post         |
-|Read      | Get          |
-|Update    | Put/Patch    |
-|Delete    | Delete       |
+| HTTP Methods |CRUD      |
+|:------------:|----------|
+| Post         |Create    |
+| Get          |Read      |
+| Put/Patch    |Update    |
+| Delete       |Delete    |
 
 ### 5.  Mention three tools we can use to make AJAX requests
 

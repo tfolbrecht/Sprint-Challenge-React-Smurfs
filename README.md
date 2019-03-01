@@ -102,8 +102,8 @@ Add a Router to this application by using React Router.
 
 - [x] For this endpoint to work, all you need is an id sent up as part of the request url.
 
-- [x] If your delete worked, you'll get a list of the smurfs back.
-- [x] Example:
+- [ ] If your delete worked, you'll get a list of the smurfs back.
+- [ ] Example:
 
 ```js
 // output: `A list of all the smurfs in the Smurf DB will be returned`
@@ -141,7 +141,7 @@ Add a Router to this application by using React Router.
   height: '3cm,
   id: 1
 }]
-```
+```https://knowbody.github.io/react-router-docs/api/Link.html
 
 **Router Stretch Problem**
 
